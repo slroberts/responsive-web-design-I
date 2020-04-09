@@ -1,0 +1,503 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* height: 100%; */
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+body {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  line-height: 22px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding: 0 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #aaa;
+  padding: 20px 0;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-link:hover {
+  animation: nav 300ms ease-in forwards;
+}
+
+@keyframes nav {
+  0% {
+    color: #aaa;
+  }
+  100% {
+    color: cadetblue;
+  }
+}
+
+.nav-link,
+.logo {
+  border-bottom: solid thin black;
+}
+
+.logo {
+  order: -1;
+  background-image: url(/img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 80px;
+}
+
+header {
+  border-bottom: solid 2px #000000;
+  margin-top: 480px;
+}
+
+.header-left {
+  width: 100%;
+  text-align: center;
+}
+
+.header-left h1 {
+  font-size: 78px;
+  font-family: "Bangers", cursive;
+}
+
+button {
+  border: solid thin #000000;
+  padding: 5px 35px;
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 70px;
+}
+
+.header-left button:hover,
+#contact-form button:hover {
+  animation: skew 400ms ease-in forwards;
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0);
+  }
+  100% {
+    background-color: cadetblue;
+    transform: skew(-8deg);
+    box-shadow: -2px 2px 8px grey;
+  }
+}
+
+.header-img {
+  background-image: url("../img/header-img.png");
+  width: 379px;
+  height: 379px;
+  display: none;
+}
+
+.two-column {
+  margin-top: 60px;
+}
+
+.col {
+  margin-bottom: 50px;
+}
+
+.col h2,
+.contact h2 {
+  font-size: 16px;
+}
+
+.two-column > .col,
+.three-column > .col {
+  width: 100%;
+}
+
+.three-column {
+  margin-top: 30px;
+}
+
+.three-column > .col {
+  margin-bottom: 60px;
+}
+
+.three-column > .col:last-child {
+  margin-bottom: 30px;
+}
+
+.middle-img,
+.services-header-img {
+  width: 100%;
+}
+
+.contact {
+  border-top: solid 2px #000000;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contact address {
+  width: 150px;
+  line-height: 18px;
+}
+
+.contact address a,
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  margin-top: 20px;
+}
+
+footer {
+  height: 20px;
+  text-align: center;
+}
+
+/* Services Page CSS */
+.container {
+  margin-top: 460px;
+}
+
+section h1 {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.services {
+  flex-wrap: wrap;
+  border-top: solid 2px black;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.service-box {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: solid thin black;
+  background-color: #f0efef;
+}
+
+.learn-more {
+  margin: 15px 0 0;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: solid thin black;
+  font-size: 11.5px;
+}
+
+.facts-section {
+  margin: 0 0 65px;
+
+  padding-top: 45px;
+  border-top: solid 2px black;
+  align-items: flex-start;
+}
+
+.facts-left {
+  width: 418px;
+  margin-right: 30px;
+}
+
+.facts-list {
+  list-style: initial;
+  list-style-type: square;
+  list-style-position: inside;
+  margin-top: 30px;
+}
+
+.list-item {
+  margin: 15px 0;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 30px 70px;
+  }
+
+  .flex-container {
+    flex-direction: row;
+  }
+
+  nav {
+    padding: 0 70px;
+  }
+
+  nav .flex-container {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .nav-link,
+  .logo {
+    border: none;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    width: initial;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+
+  header {
+    border-bottom: solid 2px #000000;
+    margin-top: 180px;
+  }
+
+  .two-column {
+    margin-top: 40px;
+  }
+
+  .col {
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  .three-column > .col {
+    margin-bottom: 40px;
+    width: 33%;
+  }
+
+  .contact {
+    padding-left: 10px;
+  }
+
+  /* Services CSS */
+  .container {
+    margin-top: 140px;
+  }
+
+  .services {
+    justify-content: space-between;
+  }
+
+  .service-box {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 876px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .nav-container {
+    width: 876px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 183px;
+    height: 36px;
+    order: initial;
+    margin-top: 0;
+  }
+
+  header {
+    margin-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .header-left {
+    width: 49%;
+    padding-top: 80px;
+    margin-left: 57px;
+  }
+
+  .header-img {
+    display: initial;
+  }
+
+  .col {
+    padding: 0;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .contact {
+    padding-left: 0;
+  }
+
+  /* Services */
+  .container {
+    margin-top: 80px;
+  }
+}
