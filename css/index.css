@@ -156,13 +156,10 @@ body {
   margin: 90px auto 0;
 }
 
-h1 {
-  font-size: 28px;
+h1, h2 {
+  font-size: 16px;
 }
 
-h2 {
-  font-size: 24px;
-}
 p {
   line-height: 22px;
 }
@@ -222,7 +219,7 @@ nav {
 }
 
 header {
-  border-bottom: solid thin #000000;
+  border-bottom: solid 2px #000000;
   padding-bottom: 70px;
 }
 
@@ -282,7 +279,7 @@ button {
 }
 
 .contact {
-  border-top: solid thin #000000;
+  border-top: solid 2px #000000;
 }
 
 .contact address {
@@ -307,7 +304,7 @@ footer {
 
 .services {
   flex-wrap: wrap;
-  border-top: solid thin black;
+  border-top: solid 2px black;
   padding-top: 40px;
 }
 
